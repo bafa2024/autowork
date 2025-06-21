@@ -27,9 +27,9 @@ class Settings(BaseSettings):
     max_concurrent_bids: int = 5
     
     # Bidding Strategy
-    min_project_budget: int = 50
-    max_existing_bids: int = 20
-    bid_immediately_threshold_minutes: int = 10
+    min_project_budget: int = 30
+    max_existing_bids: int = 200
+    bid_immediately_threshold_minutes: int = 100
     
     # Target countries (Canada, India, Pakistan)
     target_countries: List[int] = [40, 113, 151]
@@ -39,7 +39,14 @@ class Settings(BaseSettings):
         "PHP", "Laravel", "WordPress", "CodeIgniter",
         "JavaScript", "React", "Node.js", "Vue.js",
         "Python", "Django", "Flask",
-        "MySQL", "PostgreSQL", "MongoDB"
+        "MySQL", "PostgreSQL", "MongoDB",
+        "HTML", "CSS", "Bootstrap", "Tailwind CSS",
+        "Android", "iOS", "React Native",
+        "UI/UX Design", "Figma", "Adobe XD",
+        "SEO", "Digital Marketing", "Content Writing",
+        "Graphic Design", "Logo Design", "Branding",
+        "Data Entry", "Virtual Assistant", "Customer Support"
+
     ]
     
     # Bid templates
@@ -56,7 +63,27 @@ class Settings(BaseSettings):
         
         """Hi there! I'm experienced in {skills} and perfectly suited for your project. 
         I can start immediately and provide regular updates. 
-        Let's connect to discuss how I can help you achieve your goals!"""
+        Let's connect to discuss how I can help you achieve your goals!""",
+
+        """Greetings! I see you're looking for someone with expertise in {skills}.
+        I have a proven track record of delivering successful projects and can start right away.
+        Let's chat about how I can contribute to your success!""",
+        """Hello! I just came across your project and I'm excited to help.
+        I have extensive experience in {skills} and can begin immediately.
+        I guarantee high-quality work and timely delivery.
+        Let's discuss your needs in detail!""",
+        """Hi! Your project looks interesting and I would love to assist you.
+        I specialize in {skills} and can start working on it right now.
+        I have a history of satisfied clients and successful project completions.
+        Let's connect and get started!""",
+        """Hi! I just reviewed your project and I'm ready to start immediately.
+        With my expertise in {skills}, I can deliver exactly what you need. 
+        I've successfully completed similar projects and maintain 100% client satisfaction.
+        Let's discuss your requirements right away!""",
+        """Hello! Your project caught my attention and I'm very interested.
+        I specialize in {skills} and can begin working on this today.
+        I'll ensure high-quality delivery within your timeline and budget.
+        Available to chat now!"""
     ]
 
 settings = Settings()
