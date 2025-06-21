@@ -24,12 +24,12 @@ class Settings(BaseSettings):
     
     # Monitoring
     check_interval_seconds: int = 30
-    max_concurrent_bids: int = 5
+    max_concurrent_bids: int = 50
     
     # Bidding Strategy
     min_project_budget: int = 30
-    max_existing_bids: int = 200
-    bid_immediately_threshold_minutes: int = 100
+    max_existing_bids: int = 40
+    bid_immediately_threshold_minutes: int = 10
     
     # Target countries (Canada, India, Pakistan)
     target_countries: List[int] = [40, 113, 151]
